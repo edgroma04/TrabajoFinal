@@ -69,8 +69,6 @@ st.plotly_chart(fig_compare, use_container_width=True)
 st.header("Preguntas y Respuestas con ChatGPT")
 
 
-
-# Configurar la API key de OpenAI
 # Instanciar el cliente de OpenAI
 openai_api_key = st.secrets["OPENAI_API_KEY"]
 client = openai.OpenAI(api_key=openai_api_key)
