@@ -78,7 +78,7 @@ def obtener_respuesta(prompt):
       model="gpt-4o-mini",  # Ajusta el modelo según lo que necesites
       messages=[
           {"role": "system", "content": """
-          Eres un financiero que trabaja para la aseguradora patito, eres experto en el área de solvencia,
+          Eres un financiero que trabaja para una aseguradora financiera, eres experto en el área de solvencia,
           entonces vas a responder todo desde la perspectiva de la aseguradora. Contesta siempre en español
           en un máximo de 50 palabras.
           """}, #Solo podemos personalizar la parte de content
@@ -88,7 +88,7 @@ def obtener_respuesta(prompt):
   output = response.choices[0].message.content
   return output
 
-prompt_user= st.text_area("Ingresa tu pregunta: ")
+prompt_user= st.text_area("Haz una pregunta sobre los datos financieros: ")
 
 # Obtener la respuesta del modelo
 output_modelo = obtener_respuesta(prompt_user)
